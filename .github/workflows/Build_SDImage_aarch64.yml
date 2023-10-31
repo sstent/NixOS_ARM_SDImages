@@ -32,7 +32,6 @@ jobs:
             -A config.system.build.sdImage \
             -I nixos-config=./sd-image_aarch64.nix \
             --argstr system aarch64-linux \
-            --option sandbox false
 
       - uses: actions/upload-artifact@v2
         with:
