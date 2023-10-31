@@ -21,7 +21,10 @@ jobs:
           # Set an output parameter `uname` for use in subsequent steps
           run: |
             uname -a
+            apt-get update
+            apt install -y docker.io
             docker ps
+            docker run nixos/nix ls -la
             echo ::set-output name=uname::$(uname -a)
 
       - name: Get the output
