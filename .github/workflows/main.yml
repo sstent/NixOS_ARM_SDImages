@@ -33,3 +33,8 @@ jobs:
         # Echo the `uname` output parameter from the `runcmd` step
         run: |
           echo "The uname output was ${{ steps.runcmd.outputs.uname }}"
+          #apt-get update
+          #apt install -y docker.io
+          #docker ps
+          #docker run nixos/nix ls -la
+          ls -la
