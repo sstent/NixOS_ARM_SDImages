@@ -34,6 +34,7 @@ jobs:
         run: |
           nix-build '<nixpkgs/nixos>'  \
             -A config.system.build.sdImage \
+            -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/c23146505c35a07bafbecf36af4f9ebde2bb7dfd.tar.gz \
             -I nixos-config=./sd-image_aarch64.nix \
             --argstr system aarch64-linux 
 
