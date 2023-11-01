@@ -9,7 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v4
+        uses: cachix/install-nix-action@v23
+        #uses: DeterminateSystems/nix-installer-action@v4
         with:
           # Pin because the latest all-hardware profile changes
           # https://github.com/NixOS/nixpkgs/pull/128532
